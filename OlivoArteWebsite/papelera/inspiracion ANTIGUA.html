@@ -1,0 +1,92 @@
+﻿<!-- Página secundaria: Inspiración -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inspiración - OlivoArte</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    function showNotification() {
+      const notification = document.getElementById('notification');
+      notification.classList.remove('hidden');
+      setTimeout(() => {
+        notification.classList.add('hidden');
+      }, 5000);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('consulta_enviada') === 'true') {
+        showNotification();
+      }
+    });
+  </script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <div id="notification" class="fixed top-5 right-5 bg-green-600 text-white px-4 py-3 rounded shadow-lg hidden z-50">
+    ¡Gracias por tu mensaje! Te responderé lo antes posible.
+  </div>
+  <header class="bg-green-900 text-white py-6">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center">
+      <div>
+        <h1 class="text-3xl font-bold">Inspiración</h1>
+        <p class="text-sm mt-1">Ideas para dejar volar tu imaginación con la madera de olivo</p>
+      </div>
+      <nav class="mt-4 sm:mt-0">
+        <ul class="flex space-x-4 text-sm">
+          <li><a href="index.html" class="hover:underline">Inicio</a></li>
+          <li><a href="index.html#productos" class="hover:underline">Productos</a></li>
+          <li><a href="index.html#personalizados" class="hover:underline">Personalizados</a></li>
+          <li><a href="index.html#galeria" class="hover:underline">Galería</a></li>
+          <li><a href="index.html#sobre-mi" class="hover:underline">Sobre mí</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="py-12 px-4">
+    <div class="max-w-5xl mx-auto">
+      <p class="text-lg text-center mb-8">Aquí encontrarás más ejemplos de lo que puede lograrse. Inspírate y crea algo único.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded shadow">
+          <img src="images/inspiracion4.jpg" alt="Inspiración 4" class="rounded-t w-full object-cover h-64">
+          <div class="p-4 text-sm text-gray-600">Jamonero personalizado</div>
+        </div>
+        <div class="bg-white rounded shadow">
+          <img src="images/inspiracion5.jpg" alt="Inspiración 5" class="rounded-t w-full object-cover h-64">
+          <div class="p-4 text-sm text-gray-600">Caja de té de olivo con detalles grabados</div>
+        </div>
+        <div class="bg-white rounded shadow">
+          <img src="images/inspiracion6.jpg" alt="Inspiración 6" class="rounded-t w-full object-cover h-64">
+          <div class="p-4 text-sm text-gray-600">Base de reloj rústico</div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="bg-green-900 text-white py-10 mt-16">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Sobre OlivoArte</h3>
+        <p class="text-sm">Cada pieza nace del olivo, pasa por mis manos, y está lista para formar parte de tu historia. Artesanía natural, hecha con cariño desde la raíz.</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Enlaces</h3>
+        <ul class="text-sm space-y-1">
+          <li><a href="index.html" class="hover:underline">Inicio</a></li>
+          <li><a href="index.html#productos" class="hover:underline">Productos</a></li>
+          <li><a href="index.html#personalizados" class="hover:underline">Personalizados</a></li>
+          <li><a href="index.html#galeria" class="hover:underline">Galería</a></li>
+          <li><a href="index.html#sobre-mi" class="hover:underline">Sobre mí</a></li>
+          <li><a href="inspiracion.html" class="hover:underline">Inspiración</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Contacto</h3>
+        <p class="text-sm">info@olivoarte.es</p>
+        <p class="text-sm">domingales@gmail.com</p>
+      </div>
+    </div>
+    <div class="text-center text-xs text-gray-300 mt-8">© 2025 OlivoArte. Todos los derechos reservados.</div>
+  </footer>
+</body>
+</html>
